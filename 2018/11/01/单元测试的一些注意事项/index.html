@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Technology Sharing">
 <meta property="og:description" content="在公司实习了一个月了，刚到公司的时候学习了一些单元测试的写法，也遇到了一些坑，在此记录一下。 单元测试的目的： 首先保证代码质量：确保该代码段实现了想要的功能； 其次保证代码的可维护：风格良好的代码应该是对单元测试友好的，如果原代码段很难写出易于理解的单元测试，可以考虑对原代码段进行refact。 再次保证代码的可扩展：代码后期更改的时候，要尽量确保单元测试仍然可以使用。  Junit的使用初步：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-31T17:23:19.261Z">
+<meta property="og:updated_time" content="2018-10-31T17:44:30.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单元测试的一些注意事项">
 <meta name="twitter:description" content="在公司实习了一个月了，刚到公司的时候学习了一些单元测试的写法，也遇到了一些坑，在此记录一下。 单元测试的目的： 首先保证代码质量：确保该代码段实现了想要的功能； 其次保证代码的可维护：风格良好的代码应该是对单元测试友好的，如果原代码段很难写出易于理解的单元测试，可以考虑对原代码段进行refact。 再次保证代码的可扩展：代码后期更改的时候，要尽量确保单元测试仍然可以使用。  Junit的使用初步：">
@@ -307,13 +307,8 @@
 <li><strong>再次保证代码的可扩展</strong>：代码后期更改的时候，要尽量确保单元测试仍然可以使用。</li>
 </ul>
 <h2 id="Junit的使用初步："><a href="#Junit的使用初步：" class="headerlink" title="Junit的使用初步："></a>Junit的使用初步：</h2><h3 id="注解的使用："><a href="#注解的使用：" class="headerlink" title="注解的使用："></a>注解的使用：</h3><p><code>@Test</code>：测试方法<br><code>@Ignore</code>：被忽略的测试方法：加上之后，暂时不运行此段代码<br><code>@Before</code>：每一个测试方法之前运行<br><code>@After</code>：每一个测试方法之后运行<br><code>@BeforeClass</code>：方法必须必须要是静态方法（static 声明），所有测试开始之前运行，注意区分 @Before<br><code>@AfterClass</code>：方法必须要是静态方法（static 声明），所有测试结束之后运行，注意区分 <code>@After</code>  </p>
-<h3 id="依赖的添加："><a href="#依赖的添加：" class="headerlink" title="依赖的添加："></a>依赖的添加：</h3><pre><code>&lt;!-- 单元测试Junit --&gt;  
-&lt;dependency&gt;  
-    &lt;groupId&gt;junit&lt;/groupId&gt;  
-    &lt;artifactId&gt;junit&lt;/artifactId&gt;  
-    &lt;version&gt;4.12&lt;/version&gt;  
-&lt;/dependency&gt;
-</code></pre>
+<h3 id="依赖的添加："><a href="#依赖的添加：" class="headerlink" title="依赖的添加："></a>依赖的添加：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 单元测试Junit --&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span>  </span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>  </span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
