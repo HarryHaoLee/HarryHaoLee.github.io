@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Mockito,PowerMockito,Spy,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Technology Sharing">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta name="description" content="经测试，thenReturn返回的是对象引用而不是深复制了对象本身。  使用PowerMockito前，在测试类上加上@RunWith(PowerMockRunner.class);, @PrepareForTest(ClassUnderTest.class);这两个注解，在函数内使用mockStatic(Json.class);类作为参数，表示从现在开始这个类被托管了，它可以mock stat">
+<meta name="keywords" content="Mockito,PowerMockito,Spy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mockito和PowerMockito的一些注意事项">
+<meta property="og:url" content="http://yoursite.com/2018/11/02/Mockito和PowerMockito的一些注意事项/index.html">
 <meta property="og:site_name" content="Technology Sharing">
+<meta property="og:description" content="经测试，thenReturn返回的是对象引用而不是深复制了对象本身。  使用PowerMockito前，在测试类上加上@RunWith(PowerMockRunner.class);, @PrepareForTest(ClassUnderTest.class);这两个注解，在函数内使用mockStatic(Json.class);类作为参数，表示从现在开始这个类被托管了，它可以mock stat">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-01T16:31:20.707Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Technology Sharing">
+<meta name="twitter:title" content="Mockito和PowerMockito的一些注意事项">
+<meta name="twitter:description" content="经测试，thenReturn返回的是对象引用而不是深复制了对象本身。  使用PowerMockito前，在测试类上加上@RunWith(PowerMockRunner.class);, @PrepareForTest(ClassUnderTest.class);这两个注解，在函数内使用mockStatic(Json.class);类作为参数，表示从现在开始这个类被托管了，它可以mock stat">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/02/Mockito和PowerMockito的一些注意事项/">
 
 
 
 
 
-  <title>归档 | Technology Sharing</title>
+  <title>Mockito和PowerMockito的一些注意事项 | Technology Sharing</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -214,142 +219,172 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/Mockito和PowerMockito的一些注意事项/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Harry Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Technology Sharing">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Mockito和PowerMockito的一些注意事项</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T00:27:36+08:00">
+                2018-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/02/Mockito和PowerMockito的一些注意事项/" itemprop="url">
-              
-                <span itemprop="name">Mockito和PowerMockito的一些注意事项</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-02T00:27:36+08:00" content="2018-11-02">
-          11-02
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/01/单元测试的一些注意事项/" itemprop="url">
-              
-                <span itemprop="name">单元测试的一些注意事项</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-01T00:15:35+08:00" content="2018-11-01">
-          11-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/30/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-30T23:16:29+08:00" content="2018-10-30">
-          10-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <ul>
+<li><p>经测试，thenReturn返回的是对象引用而不是深复制了对象本身。</p>
+</li>
+<li><p>使用<code>PowerMockito</code>前，在测试类上加上<code>@RunWith(PowerMockRunner.class);</code>, <code>@PrepareForTest(ClassUnderTest.class);</code>这两个注解，在函数内使用<code>mockStatic(Json.class);</code>类作为参数，表示从现在开始这个类被托管了，它可以mock static函数，同时注意它本质上还是mock，即返回的还是各种null。</p>
+</li>
+<li><p><code>PowerMockito.spy(Json.class);</code> <code>spy</code>表示参数类/对象可以不调用桩实现而是直接调用这个函数的实现，一般来讲<code>mockito</code>的<code>spy</code>使用对象作为参数，<code>powermockito</code>可以使用类作为参数。</p>
+</li>
+<li><p>注意不要出现桩函数的<code>when()</code>内部仍有需要打桩的函数的情况，这可能会造成<code>verify()</code>执行次数的错误。</p>
+</li>
+<li><p><code>PowerMockito</code>用过<code>spy</code>后要这样打桩：</p>
+<p><code>PowerMockito.doReturn(raddDelayAlert).when(Json.class,&quot;fromJson&quot;,body,RaddDelayAlert.class);</code></p>
+<p>常见的<code>when().thenReturn()</code>方式可能会造成实际调用被打桩的函数，有的时候会在这里造成莫名其妙的空指针异常。</p>
+</li>
+<li><p><code>doReturn()</code> and <code>thenReturn()</code> behave differently if you use a spied object (annotated with <code>@Spy</code>) instead of a mock (annotated with <code>@Mock</code>):</p>
+<ul>
+<li><p><code>when(...) thenReturn(...)</code> makes a real method call just before the specified value will be returned. So if the      called method throws an Exception you have to deal with it / mock it etc.      Of course you still get your result (what you define in <code>thenReturn(...)</code>)</p>
+</li>
+<li><p><code>doReturn(...) when(...)</code> does not call the method at all.</p>
+</li>
+</ul>
+</li>
+</ul>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mockito/" rel="tag"># Mockito</a>
+          
+            <a href="/tags/PowerMockito/" rel="tag"># PowerMockito</a>
+          
+            <a href="/tags/Spy/" rel="tag"># Spy</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/01/单元测试的一些注意事项/" rel="next" title="单元测试的一些注意事项">
+                <i class="fa fa-chevron-left"></i> 单元测试的一些注意事项
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -357,6 +392,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -562,6 +601,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
